@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'webcss/logi.css'%}">
+
+    <style>
+
+    </style>
+</head>
+<body>
+<a  href="http://localhost:8000/"><button>Quay lại trang chủ</button></a>
+<center>
+    <div class = "login">
+        <form method="POST">
+        {% csrf_token %}
+            <h1>Đăng Nhập</h1>
+        <p><label> Tài Khoản </label>{{form.username}}</p>
+        <p><label> Mật Khẩu </label>{{form.password}}</p>
+        <input type="hidden" name='text' value ="/"/>
+        <input type="submit" value="Đăng nhập"/>     
+        </form>   
+        <a href="/register/"><input type="submit" value="Đăng Ký"/></a>
+        <a href="/register/"><input type="submit" value="Quên tài khoản"/></a>
+    </div>
+    </center>    
+</body>
+</html>

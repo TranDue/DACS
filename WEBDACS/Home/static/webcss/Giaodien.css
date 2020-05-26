@@ -1,0 +1,39 @@
+
+body{
+    background-image: url(hinhnen.jpg);
+    background-repeat:no-repeat;
+    background-origin:content;
+    background-size:cover;
+}
+.topnav {
+overflow:hidden;
+background-color:  url(hinhnen.jpg);
+background-size:cover;
+font-family:Comic Sans MS;
+}
+.topnav a{
+height:-25px;
+margin-left:400px;
+display:block;
+color:white;
+text-decoration:none;
+font-size:25px;
+}
+.topnav input[type=text] {
+padding: 6px;
+margin-top: 8px;
+font-size: 17px;
+border: none;
+}      
+.search-container{
+margin-left: 650px;
+margin-top: -35px;
+height:45px;     
+}
+.xulydangnhap>li {
+    float:right;
+}
+.xulydangnhap a{
+    color: white;
+}
+

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% load static %}
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type='text/css'>
+    <title>{% block title %}{% endblock  %}</title> 
+    <link rel="stylesheet" type="text/css" href="{% static 'webcss/Giaodien.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'webcss/Thanhcc.css'%}">
+</head>
+<body>
+<div>
+<div class="topnav">
+    <a href ="#NamePage">TheGioiManga</a>
+    <div class="search-container">
+        <form >
+            <input type="text" placeholder="Tìm truyện..." name="search">
+            <button class = " btn btn-outline-succsess my-4 my-sm-0"type="submit">Search</button>
+        </form>
+    </div>
+</div>
+    <div class="xulydangnhap">
+    {% if user.username %}
+        <li><a href="#" style:color>Hello {{user.username}}</a></li>
+        <li><a href = "{% url 'logout' %}"> Đăng xuất </a></li>
+        {% else %}
+            <li><a href="{%  url 'register' %}">Đăng ký | </a> <a href="{%  url 'login' %}">Đăng nhập</a></li>
+        {% endif %}   
+</div>
+</div> 
+
+<nav class="main-nav hidden-xs">
+    <div class="inner>">
+        <div class="container">
+            <div class="Module Module-144">
+                <div class="ModuluContent">
+                    <ul class="nav">
+                        <li class = "active">
+                            <a target="_self" href="trang-chu">┌∩┐</a>
+                        </li>
+                        <li>
+                            <a target="_self" href="hot">HOT</a>
+                        </li>
+                        <li>
+                            <a target="_self" href="theo-doi">THEO DÕI</a>
+                        </li>
+                        <li>
+                            <a target="_self" href="the-loai">THỂ LOẠI</a> 
+                        </li>
+                        <li>
+                            <a target="_self" href="lich-su">LỊCH SỬ</a> 
+                        </li>
+                        <li>
+                            <a target="_self" href="xep-hang">XẾP HẠNG</a> 
+                        </li>
+                        <li>
+                            <a target="_self" href="nhom">GROUP</a> 
+                        </li>
+                        <li>
+                            <a target="_self" href="gop-y">GÓP Ý</a> 
+                        </li>
+                    </ul>
+                </div>            
+            </div>
+        </div>
+    </div>
+</nav>
+<div style ="display: block;width:796.6px;height:41px;float:none;"></div>
+    {% block content %}
+        
+    {% endblock  %}
+</body>
+</html>
